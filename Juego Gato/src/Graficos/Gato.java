@@ -2,7 +2,7 @@ package Graficos;
 /**
  
  
- * @author Iván Arroyo
+ * @author Iván Arroyo Obando
 
  */
 
@@ -19,7 +19,9 @@ public class Gato extends javax.swing.JFrame
         movimientos = new String[3][3];
         llenarMatriz();
         
-        initComponents();
+        initComponents();  
+        setLocationRelativeTo(null);
+       
     }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
