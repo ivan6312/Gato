@@ -9,13 +9,17 @@ package Graficos;
 
 public class Gato extends javax.swing.JFrame 
 {
+//    DECLARACION DE VARIABLES
+    
     private boolean jugador;
     private String[][] movimientos;
-    
+/**
+ * 
+ */  //Se inicializa en el jujador 1 que son X
     
     public Gato() 
     {
-        jugador = true; //se inicializa en el jujador 1 que son X
+        jugador = true; 
         movimientos = new String[3][3];
         llenarMatriz();
         
@@ -200,7 +204,7 @@ public class Gato extends javax.swing.JFrame
     }// </editor-fold>//GEN-END:initComponents
 
     private void boton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton1ActionPerformed
-       
+//    Llama al proceso movimiento para que revise y tire le mensaje de ganador 
        if(jugador && movimientos[0][0].equals("i"))
        {
            boton1.setText("X");
@@ -222,7 +226,9 @@ public class Gato extends javax.swing.JFrame
     }//GEN-LAST:event_boton1ActionPerformed
 
     private void boton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton2ActionPerformed
-       if(jugador && movimientos[0][1].equals("i"))
+      //    Llama al proceso movimiento para que revise y tire le mensaje de ganador 
+        
+        if(jugador && movimientos[0][1].equals("i"))
        {
            boton2.setText("X");
            setMovimiento(0,1,"X");
@@ -243,7 +249,9 @@ public class Gato extends javax.swing.JFrame
     }//GEN-LAST:event_boton2ActionPerformed
 
     private void boton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton3ActionPerformed
-       if(jugador && movimientos[0][2].equals("i"))
+       
+        //    Llama al proceso movimiento para que revise y tire le mensaje de ganador 
+        if(jugador && movimientos[0][2].equals("i"))
        {
            boton3.setText("X");
            setMovimiento(0,2,"X");
@@ -264,7 +272,9 @@ public class Gato extends javax.swing.JFrame
     }//GEN-LAST:event_boton3ActionPerformed
 
     private void boton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton4ActionPerformed
-       if(jugador && movimientos[1][0].equals("i"))
+      
+        //    Llama al proceso movimiento para que revise y tire le mensaje de ganador 
+        if(jugador && movimientos[1][0].equals("i"))
        {
            boton4.setText("X");
            setMovimiento(1,0,"X");
@@ -285,7 +295,9 @@ public class Gato extends javax.swing.JFrame
     }//GEN-LAST:event_boton4ActionPerformed
 
     private void boton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton5ActionPerformed
-       if(jugador && movimientos[1][1].equals("i"))
+      //    Llama al proceso movimiento para que revise y tire le mensaje de ganador 
+        
+        if(jugador && movimientos[1][1].equals("i"))
        {
            boton5.setText("X");
            setMovimiento(1,1,"X");
@@ -306,7 +318,9 @@ public class Gato extends javax.swing.JFrame
     }//GEN-LAST:event_boton5ActionPerformed
 
     private void boton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton6ActionPerformed
-       if(jugador && movimientos[1][2].equals("i"))
+      //    Llama al proceso movimiento para que revise y tire le mensaje de ganador 
+        
+        if(jugador && movimientos[1][2].equals("i"))
        {
            boton6.setText("X");
            setMovimiento(1,2,"X");
@@ -327,7 +341,9 @@ public class Gato extends javax.swing.JFrame
     }//GEN-LAST:event_boton6ActionPerformed
 
     private void boton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton7ActionPerformed
-       if(jugador && movimientos[2][0].equals("i"))
+      //    Llama al proceso movimiento para que revise y tire le mensaje de ganador 
+        
+        if(jugador && movimientos[2][0].equals("i"))
        {
            boton7.setText("X");
            setMovimiento(2,0,"X");
@@ -348,7 +364,10 @@ public class Gato extends javax.swing.JFrame
     }//GEN-LAST:event_boton7ActionPerformed
 
     private void boton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton8ActionPerformed
-       if(jugador && movimientos[2][1].equals("i"))
+      //    Llama al proceso movimiento para que revise y tire le mensaje de ganador 
+        
+        
+        if(jugador && movimientos[2][1].equals("i"))
        {
            boton8.setText("X");
            setMovimiento(2,1,"X");
@@ -369,7 +388,9 @@ public class Gato extends javax.swing.JFrame
     }//GEN-LAST:event_boton8ActionPerformed
 
     private void boton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton9ActionPerformed
-         if(jugador && movimientos[2][2].equals("i"))
+        //    Llama al proceso movimiento para que revise y tire le mensaje de ganador 
+        
+        if(jugador && movimientos[2][2].equals("i"))
        {
            boton9.setText("X");
            setMovimiento(2,2,"X");
@@ -388,8 +409,13 @@ public class Gato extends javax.swing.JFrame
                javax.swing.JOptionPane.showMessageDialog(null, "El jugador 2 ha ganado!!");
        }
     }//GEN-LAST:event_boton9ActionPerformed
-
+/**
+ * Proceso de llenar la matriz 
+ * @param evt 
+ */
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    
+        
         llenarMatriz();
         boton1.setText("");
         boton2.setText("");
@@ -409,6 +435,7 @@ public class Gato extends javax.swing.JFrame
 
     
     public boolean ganador1()
+//            MOVIMIENTOS del Jugador 1 para ganar , todas las combinaciones posibles 
     {
         if( ((movimientos[0][0].equals("X")) && (movimientos[0][1].equals("X")) && (movimientos[0][2].equals("X")))
                 || ((movimientos[1][0].equals("X")) && (movimientos[1][1].equals("X")) && (movimientos[1][2].equals("X")))
@@ -425,6 +452,7 @@ public class Gato extends javax.swing.JFrame
     }
     
     public boolean ganador2()
+            //            MOVIMIENTOS del Jugador 2 para ganar , todas las combinaciones posibles 
     {
         if( ((movimientos[0][0].equals("O")) && (movimientos[0][1].equals("O")) && (movimientos[0][2].equals("O")))
                 || ((movimientos[1][0].equals("O")) && (movimientos[1][1].equals("O")) && (movimientos[1][2].equals("O")))
@@ -456,6 +484,7 @@ public class Gato extends javax.swing.JFrame
     }
     
     public void imprimirMatriz()
+//            METODO PARA IMPRIMIR MATRIS 
     {
         for(int i = 0; i < 3; i++)
         {
