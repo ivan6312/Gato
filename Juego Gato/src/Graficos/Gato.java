@@ -410,7 +410,7 @@ public class Gato extends javax.swing.JFrame
        }
     }//GEN-LAST:event_boton9ActionPerformed
 /**
- * Proceso de llenar la matriz 
+ * Proceso de vaciar los botones 
  * @param evt 
  */
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -428,7 +428,10 @@ public class Gato extends javax.swing.JFrame
         boton9.setText("");
         jugador = true;
     }//GEN-LAST:event_jButton1ActionPerformed
-
+/**
+ * Boton de salida 
+ * @param evt 
+ */
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         System.exit(0);
     }//GEN-LAST:event_jButton2ActionPerformed
@@ -472,6 +475,9 @@ public class Gato extends javax.swing.JFrame
     {
         movimientos[i][j] = m;
     }
+/**
+ * Metodo para llenar la matriz 
+ */
     public void llenarMatriz()
     {
         for(int i = 0; i < 3; i++)
@@ -521,10 +527,12 @@ public class Gato extends javax.swing.JFrame
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
+//        Hace que el gato se desplegue en la plantalla 
+         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Gato().setVisible(true);
             }
+       
         });
     }
     
